@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arauto+ | Seu Refúgio Espiritual em Audiobooks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth; 
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-lora {
+            font-family: 'Lora', serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.pixabay.com/photo/2019/05/24/19/21/learn-4226965_1280.jpg');
+            background-size: cover;
+            background-position: center bottom; 
+        }
+        .section-bg-light {
+            background-color: #f8f9fa;
+        }
+        .section-bg-accent {
+            background-color: #fffbeb;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+         .cta-button:hover { 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .text-arauto-red { color: #D93B3B; }
+        .bg-arauto-red { background-color: #D93B3B; }
+
+        .logo-container img {
+            max-width: 250px; 
+            height: auto;
+        }
+        /* .price-emphasis and .price-installments styles removed as Tailwind classes will be used directly */
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 0.5rem;
+            color: #D93B3B;
+        }
+        section[id] {
+            scroll-margin-top: 80px; /* Ajustado para um valor mais seguro em telas menores */
+        }
+        @media (min-width: 768px) { 
+            section[id] {
+                scroll-margin-top: 90px; /* Ajustado para um valor mais seguro em telas maiores */
+            }
+        }
+
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <header class="bg-black text-white shadow-lg sticky top-0 z-50"> 
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center"> 
+            <div class="logo-container">
+                <img src="https://live.staticflickr.com/65535/54538683821_543b22ab44_n.jpg" alt="Logo Arauto+" class="h-14 md:h-16"> 
+            </div>
+            <nav class="space-x-3 md:space-x-6 text-sm sm:text-base">
+                <a href="#sobre" class="hover:text-arauto-red transition-colors duration-300">Sobre</a>
+                <a href="#funcionalidades" class="hover:text-arauto-red transition-colors duration-300">Funcionalidades</a>
+                <a href="#beneficios" class="hover:text-arauto-red transition-colors duration-300">Benefícios</a>
+                <a href="#assinatura" class="bg-arauto-red hover:bg-red-700 text-white font-semibold py-2 px-3 md:px-4 rounded-lg cta-button text-xs sm:text-sm md:text-base">Acesso Vitalício</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-lora mb-10 leading-tight">
+                Arauto+: <span class="text-arauto-red">Ouça</span> a Palavra, <span class="text-arauto-red">Transforme</span> Sua Vida.
+            </h1>
+            <a href="#assinatura" class="bg-arauto-red hover:bg-red-700 text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-lg text-lg md:text-xl cta-button shadow-xl">
+                QUERO MEU ACESSO VITALÍCIO
+            </a>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-16 md:py-24 section-bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora text-gray-800 mb-4">Bem-vindo ao <span class="text-arauto-red">Arauto+</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Seu novo portal para uma jornada espiritual mais profunda e significativa.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://cdn.pixabay.com/photo/2025/05/11/16/22/girl-9593279_1280.jpg" alt="[Imagem de Jovem ouvindo audiobook Arauto+]" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2 text-gray-700 space-y-4 text-base md:text-lg">
+                    <p>No <strong>Arauto+</strong>, acreditamos no poder transformador da Palavra de Deus. Nossa missão é ser a ponte entre você e os ensinamentos sagrados, oferecendo acesso facilitado a uma rica biblioteca de audiobooks evangélicos cuidadosamente selecionados.</p>
+                    <p>Cada título é uma semente de fé, esperança e sabedoria, narrada para tocar seu coração e fortalecer seu relacionamento com o Senhor Jesus Cristo. Queremos que o Arauto+ seja seu companheiro diário, uma fonte de inspiração e crescimento espiritual constante.</p>
+                    <p>Aqui, você encontrará conteúdos que: </p>
+                    <ul class="list-disc list-inside space-y-2 pl-4 text-arauto-red">
+                        <li><span class="text-gray-700">Fortalecem sua fé e convicção.</span></li>
+                        <li><span class="text-gray-700">Promovem um profundo crescimento espiritual.</span></li>
+                        <li><span class="text-gray-700">Iluminam seu caminho com clareza e propósito.</span></li>
+                        <li><span class="text-gray-700">Aproximam você de Deus e de Jesus a cada audição.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="funcionalidades" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora text-gray-800 mb-4">Funcionalidades <span class="text-arauto-red">Incríveis</span> do Player Arauto+</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Uma experiência de audição pensada para sua edificação e conforto.</p>
+            </div>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="feature-icon mx-auto md:mx-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                    <h3 class="text-xl font-semibold mb-2 font-lora text-gray-800">Interface Moderna e Responsiva</h3>
+                    <p class="text-gray-600 text-sm">Design elegante, compatível com todos os tamanhos de tela – do celular ao computador.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                     <svg class="feature-icon mx-auto md:mx-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" /></svg>
+                    <h3 class="text-xl font-semibold mb-2 font-lora text-gray-800">Playlist por Capítulos</h3>
+                    <p class="text-gray-600 text-sm">Toque facilmente qualquer capítulo. Cada faixa tem título e numeração claros.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="feature-icon mx-auto md:mx-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" /></svg>
+                    <h3 class="text-xl font-semibold mb-2 font-lora text-gray-800">Controles de Reprodução</h3>
+                    <p class="text-gray-600 text-sm">Avance, retroceda, pause ou continue com botões grandes e intuitivos.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="feature-icon mx-auto md:mx-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                    <h3 class="text-xl font-semibold mb-2 font-lora text-gray-800">Temporizador Automático</h3>
+                    <p class="text-gray-600 text-sm">Ouça por 5, 10, 15, 30 min ou 1h. O áudio pausa automaticamente.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="feature-icon mx-auto md:mx-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>
+                    <h3 class="text-xl font-semibold mb-2 font-lora text-gray-800">Controle de Velocidade</h3>
+                    <p class="text-gray-600 text-sm">Ajuste a narração entre 0.5x, 1x, 1.5x e 2x conforme seu ritmo.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="feature-icon mx-auto md:mx-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75H9.008v.006H9v-.006Zm-.713-3.462A4.5 4.5 0 0 1 12.75 6H16.5a4.5 4.5 0 0 1 4.5 4.5v3.75a4.5 4.5 0 0 1-4.5 4.5H16.5a4.502 4.502 0 0 1-2.483-1.033M9 12.75H6.75A4.5 4.5 0 0 0 2.25 17.25v.513c0 .864.936 1.53 1.907 1.234l1.06-.318M9 12.75H6.75m0 0A4.5 4.5 0 0 1 2.25 8.25V7.737c0-.864.936-1.53 1.907-1.234l1.06.318m0 0A4.502 4.502 0 0 0 9 6h3.75" /></svg>
+                    <h3 class="text-xl font-semibold mb-2 font-lora text-gray-800">Barra de Progresso</h3>
+                    <p class="text-gray-600 text-sm">Acompanhe quanto ouviu e quanto falta com marcadores de tempo.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="feature-icon mx-auto md:mx-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
+                    <h3 class="text-xl font-semibold mb-2 font-lora text-gray-800">Baixe os Áudios</h3>
+                    <p class="text-gray-600 text-sm">Tenha o conteúdo offline sempre que quiser. Clique em “Baixar Capítulo”.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="feature-icon mx-auto md:mx-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" /></svg>
+                    <h3 class="text-xl font-semibold mb-2 font-lora text-gray-800">Compartilhamento Fácil</h3>
+                    <p class="text-gray-600 text-sm">Envie o link do capítulo para WhatsApp, Facebook, Twitter (X), Email ou copie.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <svg class="feature-icon mx-auto md:mx-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286Zm0 12.975a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" /></svg>
+                    <h3 class="text-xl font-semibold mb-2 font-lora text-gray-800">Reporte de Problemas</h3>
+                    <p class="text-gray-600 text-sm">Achou algum erro? Relate diretamente pelo player e ajude a melhorar.</p>
+                </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-2 lg:col-span-1 lg:col-start-2"> <svg class="feature-icon mx-auto md:mx-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5h3m-6.75 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-15a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 4.5v15a2.25 2.25 0 0 0 2.25 2.25Z" /></svg>
+                    <h3 class="text-xl font-semibold mb-2 font-lora text-gray-800">Integração MediaSession</h3>
+                    <p class="text-gray-600 text-sm">Controle o áudio pela tela de bloqueio ou painel de notificações do celular.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-16 md:py-24 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora mb-4">Um Investimento <span class="text-arauto-red">Único</span> para uma Vida <span class="text-arauto-red">Abençoada</span></h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Com o Arauto+, seu acesso é para sempre. Sem mensalidades, sem preocupações.</p>
+            </div>
+            <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-center">
+                <div class="bg-gray-700 p-8 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-arauto-red mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 font-lora">Acesso Vitalício</h3>
+                    <p class="text-gray-300">Uma única contribuição garante acesso ilimitado e para SEMPRE a todo o nosso acervo. Seu legado espiritual começa aqui.</p>
+                </div>
+                <div class="bg-gray-700 p-8 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-arauto-red mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m-15.357-2a8.001 8.001 0 0115.357-2m0 0H15" /></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 font-lora">Conteúdo Sempre Novo</h3>
+                    <p class="text-gray-300">Nossa biblioteca está em constante crescimento! Desfrute de novos audiobooks adicionados regularmente, sem custos adicionais.</p>
+                </div>
+                <div class="bg-gray-700 p-8 rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-arauto-red mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 font-lora">Paz de Espírito</h3>
+                    <p class="text-gray-300">Invista na sua jornada espiritual sem se preocupar com renovações ou pagamentos futuros. Sua fé, seu tempo, seu Arauto+.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 section-bg-accent">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora text-gray-800 mb-4">Vidas <span class="text-arauto-red">Transformadas</span> pela Palavra</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Veja o que nossos membros dizem sobre o Arauto+.</p>
+            </div>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-xl border-l-4 border-arauto-red">
+                    <p class="text-gray-600 italic mb-4">"O Arauto+ tem sido uma bênção na minha vida. Consigo meditar na Palavra enquanto cuido da casa ou no trânsito. Minha fé se fortaleceu muito!"</p>
+                    <p class="font-semibold text-gray-800">- Maria S., Membro Vitalício</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-xl border-l-4 border-arauto-red">
+                    <p class="text-gray-600 italic mb-4">"Finalmente encontrei uma plataforma com audiobooks evangélicos de qualidade e com acesso vitalício. O investimento valeu cada centavo. Recomendo a todos!"</p>
+                    <p class="font-semibold text-gray-800">- João P., Membro Vitalício</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="assinatura" class="py-16 md:py-24 hero-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold font-lora mb-6">Junte-se à Família <span class="text-arauto-red">Arauto+</span> Hoje!</h2>
+            
+            <div class="bg-white text-gray-800 p-6 sm:p-8 md:p-12 rounded-xl shadow-2xl max-w-md sm:max-w-lg md:max-w-2xl mx-auto my-10 inline-block">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold font-lora mb-2">Acesso Vitalício Arauto+</h3>
+                <p class="text-gray-600 mb-4 text-base sm:text-lg">Todo o conteúdo atual e futuro, para sempre.</p>
+                <div class="mb-3">
+                    <span class="align-top text-arauto-red text-xl sm:text-2xl md:text-[1.5rem]">12x de</span>
+                    <span class="font-bold text-arauto-red text-4xl sm:text-5xl md:text-[3.5rem]">R$ 24<span class="text-2xl sm:text-3xl md:text-3xl align-top">,99</span></span>
+                </div>
+                <p class="text-gray-500 mb-6 text-xs sm:text-sm">sem juros no cartão</p>
+                
+                <button onclick="redirectToMercadoPago()" class="w-full bg-arauto-red hover:bg-red-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-lg sm:text-xl cta-button shadow-xl mt-4">
+                    SIM, QUERO ACESSO VITALÍCIO AGORA!
+                </button>
+
+                <p class="text-xs text-gray-400 mt-4">Pagamento seguro. Acesso imediato.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // O script para document.getElementById('currentYear') foi removido pois o footer foi removido.
+
+        function redirectToMercadoPago() {
+            // Redireciona para o checkout do Mercado Pago com o preference ID fornecido
+            window.location.href = 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=9865896-9abf5284-fa1f-4015-8773-923248d90d9e';
+        }
+    </script>
+
+</body>
+</html>
