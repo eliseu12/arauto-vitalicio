@@ -47,45 +47,46 @@
             margin-bottom: 0.5rem;
             color: #D93B3B;
         }
+        
+        /* Remove scroll-margin-top para telas pequenas, pois o header não é sticky */
         section[id] {
-            scroll-margin-top: 72px; /* Altura do header em telas menores (48px logo + 24px padding y) */
+            scroll-margin-top: 0; 
         }
-        @media (min-width: 768px) { /* md breakpoint */
+        @media (min-width: 768px) { /* md breakpoint - quando o header se torna sticky */
             section[id] {
-                scroll-margin-top: 80px; /* Altura do header em telas maiores (56px logo + 24px padding y) */
+                scroll-margin-top: 80px; /* Altura aproximada do header em telas maiores (56px logo + 24px padding y) */
             }
         }
         
-        /* Estilos para o menu mobile quando visível (sem a classe 'hidden') */
         #mobile-menu {
             position: absolute;
-            top: 100%; /* Posicionado logo abaixo do header */
+            top: 100%; 
             left: 0;
             right: 0;
-            background-color: black; /* Mesmo fundo do header */
-            z-index: 49; /* Abaixo do header (z-50) mas acima do conteúdo da página */
-            border-top: 1px solid #374151; /* gray-700 */
+            background-color: black; 
+            z-index: 49; 
+            border-top: 1px solid #374151; 
         }
         #mobile-menu a {
             display: block;
-            padding: 0.75rem 1rem; /* py-3 px-4 */
+            padding: 0.75rem 1rem; 
             text-align: center;
             color: white;
-            border-bottom: 1px solid #374151; /* gray-700 */
+            border-bottom: 1px solid #374151; 
         }
         #mobile-menu a:last-child {
             border-bottom: none;
         }
-        #mobile-menu a.bg-arauto-red { /* Estilo específico para o botão CTA no menu mobile */
-            margin: 0.75rem 1rem; /* Adiciona margem ao redor do botão */
-            border-radius: 0.375rem; /* rounded-md */
+        #mobile-menu a.bg-arauto-red { 
+            margin: 0.75rem 1rem; 
+            border-radius: 0.375rem; 
         }
 
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
 
-    <header class="bg-black text-white shadow-lg sticky top-0 z-50"> 
+    <header class="bg-black text-white shadow-lg md:sticky md:top-0 md:z-50"> 
         <div class="container mx-auto px-6 py-3 flex justify-between items-center relative"> 
             <div class="logo-container">
                 <img src="https://live.staticflickr.com/65535/54538683821_543b22ab44_n.jpg" alt="Logo Arauto+" class="h-12 md:h-14"> 
@@ -285,13 +286,11 @@
 
     <script>
         const menuToggle = document.getElementById('menu-toggle');
-        const mainNav = document.getElementById('main-nav'); 
         const mobileMenu = document.getElementById('mobile-menu'); 
 
         menuToggle.addEventListener('click', function() {
             mobileMenu.classList.toggle('hidden');
         });
-
         
         const navLinksMobile = document.querySelectorAll('.nav-link-mobile');
         navLinksMobile.forEach(link => {
@@ -299,9 +298,6 @@
                 mobileMenu.classList.add('hidden');
             });
         });
-        
-        
-
 
         function redirectToMercadoPago() {
             window.location.href = 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=9865896-9abf5284-fa1f-4015-8773-923248d90d9e';
