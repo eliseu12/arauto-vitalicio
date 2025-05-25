@@ -41,7 +41,6 @@
             max-width: 250px; 
             height: auto;
         }
-        /* .price-emphasis and .price-installments styles removed as Tailwind classes will be used directly */
         .feature-icon {
             width: 3rem;
             height: 3rem;
@@ -49,12 +48,37 @@
             color: #D93B3B;
         }
         section[id] {
-            scroll-margin-top: 80px; /* Ajustado para um valor mais seguro em telas menores */
+            scroll-margin-top: 72px; /* Altura do header em telas menores (48px logo + 24px padding y) */
         }
-        @media (min-width: 768px) { 
+        @media (min-width: 768px) { /* md breakpoint */
             section[id] {
-                scroll-margin-top: 90px; /* Ajustado para um valor mais seguro em telas maiores */
+                scroll-margin-top: 80px; /* Altura do header em telas maiores (56px logo + 24px padding y) */
             }
+        }
+        
+        /* Estilos para o menu mobile quando visível (sem a classe 'hidden') */
+        #mobile-menu {
+            position: absolute;
+            top: 100%; /* Posicionado logo abaixo do header */
+            left: 0;
+            right: 0;
+            background-color: black; /* Mesmo fundo do header */
+            z-index: 49; /* Abaixo do header (z-50) mas acima do conteúdo da página */
+            border-top: 1px solid #374151; /* gray-700 */
+        }
+        #mobile-menu a {
+            display: block;
+            padding: 0.75rem 1rem; /* py-3 px-4 */
+            text-align: center;
+            color: white;
+            border-bottom: 1px solid #374151; /* gray-700 */
+        }
+        #mobile-menu a:last-child {
+            border-bottom: none;
+        }
+        #mobile-menu a.bg-arauto-red { /* Estilo específico para o botão CTA no menu mobile */
+            margin: 0.75rem 1rem; /* Adiciona margem ao redor do botão */
+            border-radius: 0.375rem; /* rounded-md */
         }
 
     </style>
@@ -62,16 +86,31 @@
 <body class="bg-white text-gray-800 antialiased">
 
     <header class="bg-black text-white shadow-lg sticky top-0 z-50"> 
-        <div class="container mx-auto px-6 py-2 flex justify-between items-center"> 
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center relative"> 
             <div class="logo-container">
-                <img src="https://live.staticflickr.com/65535/54538683821_543b22ab44_n.jpg" alt="Logo Arauto+" class="h-14 md:h-16"> 
+                <img src="https://live.staticflickr.com/65535/54538683821_543b22ab44_n.jpg" alt="Logo Arauto+" class="h-12 md:h-14"> 
             </div>
-            <nav class="space-x-3 md:space-x-6 text-sm sm:text-base">
-                <a href="#sobre" class="hover:text-arauto-red transition-colors duration-300">Sobre</a>
-                <a href="#funcionalidades" class="hover:text-arauto-red transition-colors duration-300">Funcionalidades</a>
-                <a href="#beneficios" class="hover:text-arauto-red transition-colors duration-300">Benefícios</a>
-                <a href="#assinatura" class="bg-arauto-red hover:bg-red-700 text-white font-semibold py-2 px-3 md:px-4 rounded-lg cta-button text-xs sm:text-sm md:text-base">Acesso Vitalício</a>
+
+            <div class="md:hidden">
+                <button id="menu-toggle" aria-label="Abrir menu" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <nav id="main-nav" class="hidden md:flex md:items-center md:space-x-6 text-sm sm:text-base">
+                <a href="#sobre" class="hover:text-arauto-red transition-colors duration-300 nav-link">Sobre</a>
+                <a href="#funcionalidades" class="hover:text-arauto-red transition-colors duration-300 nav-link">Funcionalidades</a>
+                <a href="#beneficios" class="hover:text-arauto-red transition-colors duration-300 nav-link">Benefícios</a>
+                <a href="#assinatura" class="bg-arauto-red hover:bg-red-700 text-white font-semibold py-2 px-3 md:px-4 rounded-lg cta-button text-xs sm:text-sm md:text-base nav-link">Acesso Vitalício</a>
             </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#sobre" class="hover:text-arauto-red transition-colors duration-300 nav-link-mobile">Sobre</a>
+            <a href="#funcionalidades" class="hover:text-arauto-red transition-colors duration-300 nav-link-mobile">Funcionalidades</a>
+            <a href="#beneficios" class="hover:text-arauto-red transition-colors duration-300 nav-link-mobile">Benefícios</a>
+            <a href="#assinatura" class="bg-arauto-red hover:bg-red-700 text-white font-semibold nav-link-mobile">Acesso Vitalício</a>
         </div>
     </header>
 
@@ -245,10 +284,26 @@
     </section>
 
     <script>
-        // O script para document.getElementById('currentYear') foi removido pois o footer foi removido.
+        const menuToggle = document.getElementById('menu-toggle');
+        const mainNav = document.getElementById('main-nav'); 
+        const mobileMenu = document.getElementById('mobile-menu'); 
+
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        
+        const navLinksMobile = document.querySelectorAll('.nav-link-mobile');
+        navLinksMobile.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        
+
 
         function redirectToMercadoPago() {
-            // Redireciona para o checkout do Mercado Pago com o preference ID fornecido
             window.location.href = 'https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=9865896-9abf5284-fa1f-4015-8773-923248d90d9e';
         }
     </script>
